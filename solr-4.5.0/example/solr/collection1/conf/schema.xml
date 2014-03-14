@@ -50,10 +50,12 @@
 <schema name="example" version="1.5">
  <fields>
   <field name="PID" type="text_general" indexed="true" stored="true" multiValued="false"/>
-  <field name="Comment" type="text_general" indexed="true" stored="true" multiValued="false"/>
-  <field name="Value" type="text_general" indexed="true" stored="true" multiValued="true"/>
-  <field name="Rating" type="double" indexed="true" stored="true" multiValued="true"/>
-  <field name="Title" type="text_general" indexed="true" stored="true" multiValued="true"/>
+  <field name="ProductTitle" type="text_general" indexed="true" stored="true" multiValued="false"/>
+  <field name="DisplayName" type="text_general" indexed="true" stored="true" multiValued="false"/>
+  <field name="Category" type="text_general" indexed="true" stored="true" multiValued="false"/>
+  <field name="CommentText" type="text_general" indexed="true" stored="true" multiValued="true"/>
+  <field name="CommentRating" type="double" indexed="true" stored="true" multiValued="true"/>
+  <field name="CommentTitle" type="text_general" indexed="true" stored="true" multiValued="true"/>
      
 
   <field name="content" type="text_general" indexed="false" stored="true" multiValued="true"/>
@@ -82,8 +84,8 @@
       Unless this field is marked with required="false", it will be a required field
    -->
 
-    <uniqueKey>PID</uniqueKey>
-    
+    <uniqueKey>PID</uniqueKey
+>    
   <types>
     <!-- field type definitions. The "name" attribute is
        just a label to be used by field definitions.  The "class"
