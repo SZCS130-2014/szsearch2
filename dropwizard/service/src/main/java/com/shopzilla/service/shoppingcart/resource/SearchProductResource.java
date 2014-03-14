@@ -530,17 +530,24 @@ public class SearchProductResource {
                                   @QueryParam("sort") Optional<String> sorder,
                                   @QueryParam("rs") Optional<Integer> rStars) {
 
+        static String cats[] = { "Pens", "Binders", "Binder Pockets and Index Dividers", "Office Chairs", "Printers", "Paper Shredders", "Pencils", "Fans", "Paper", "Cash Registers and POS Equipment", "Ink, Toner and Inkjet Cartridges", "Notebooks and Writing Pads", "Clipboards", "Coffee Makers", "Phones", "Glue", "Vacuums", "Headphones", "Binder Rings", "Dishwashers", "Sheet Protectors", "Backpacks", "Clocks", "Camping and Hiking Gear", "Outdoor Power Equipment", "MP3 and Media Players", "Heaters", "Outdoor Games and Fun", "Computer Monitors", "Hard Drives", "Shaving Appliances", "Digital Cameras", 
+        "Laptop Computers", "Video Games", "Tablet Computers", "GPS", "Stereo Speakers", "Refrigerators", "TV", "Memory Cards", "Microwave Ovens", "Blu-Ray Disc Players", "Digital Book Reader Accessories", "Digital Book Readers", "Pointing Devices", "Wine and Beverage Coolers", "Learning Toys", "Desktop Computers", "Ranges", "Projectors", "Trimmers", "Hair Care Appliances", "Home Theater Systems", "Electric Toothbrushes", "Network Switches", "Computer Towers", "Cable and DSL Modems", "Miscellaneous Software", "Other Laptop Accessories", "MP3 Player Accessories", "Camcorders", "Cell Phone Accessories", 
+        "Blenders", "Computer Game Controllers", "Home Security", "Portable Radios", "Headsets and Microphones", "Camera Lenses", "Washers and Dryers", "Food Processors", "Wii Consoles", "Scanners", "Xbox Accessories", "Toasters", "Computer Power Supplies", "Toaster Ovens", "Radar Detectors and Jammers", "Kitchen Supplies and Utensils", "Network Routers and Bridges", "Dehumidifiers", "Operating Systems", "Portable Tape and Digital Recorders", "Camera Flashes", "Treadmills", "Media Storage", "Computer Speakers", "Mixers", "Electric Skillets and Woks", "Vacuum Accessories", "Electric Irons", "Washer and Dryer Accessories", 
+        "Desks", "Cookware", "Receivers", "Can Openers", "CPUs and Computer Processor Upgrades", "Graphics Cards", "CD and DVD Drives", "Computer Keyboards", "Blood Pressure Monitors", "Personal Scales", "Air Conditioners", "PDA and Handheld Computers", "Juicers", "Media Hubs", "Sewing Machines", "Garment Steamers", "Deep Fryers", "Strollers/Joggers", "Printer Accessories", "Baby Rattles and Teethers", "Projector Accessories", "Camcorder Accessories", "Turntables", "Air Purifiers", "Remote Controls", "System Cooling", "Crock Pots and Slow Cookers", "Motherboards", "Cutlery", "Paper Shredder Waste Bags", "Marine Electronics", 
+        "Breadmakers", "Calculators", "Popcorn Makers", "Indoor Grills", "Nursing and Feeding", "Tea Kettles", "Massagers", "Portable Cassette Players", "Cassette Decks", "Warming Drawers", "Food Dehydrators", "Weather Instruments", "Fax Machines", "Car Seat Accessories", "NIC", "Hunting and Archery Equipment", "Original Luggage", "Binoculars and Telescopes", "Humidifiers", "XM and Sirius Satellite Radios", "Monitor Accessories", "Office, Tax and Accounting Software", "Car Seats", "Computer Cables and Adapters", "Dolls", "Sound Cards", "Baby and Toddler Safety", "Games and Puzzles", "Rechargeable and Replacement Batteries", 
+        "Stroller Accessories", "Two-Way Radios", "Briefcases", "DVR", "Car Amplifiers", "Cooktops", "Bakeware", "Trash Compactors", "Range Hoods", "Waffle Makers", "Sandwich Makers", "Yoga and Pilates Equipment", "Integrated Amplifiers", "Meat Grinders", "Boomboxes", "Refrigerator Accessories", "Freezers", "Mixer Accessories", "Floor Cleaners", "Air Conditioner Accessories", "Coffee Grinders", "Water Filters", "Car Subwoofers", "Camera Cases", "DVD/VCR Combos", "Fishing Gear", "Food Slicers", "Snow Cone and Ice Shavers", "Electric Knife Sharpeners", "IO Controllers", "Fever Thermometers", "Karaoke Equipment", "Elliptical and Cross Trainer Machines", 
+        "Watches", "WebCams", "Home Gyms" };
         ArrayList<String> allCategories = new ArrayList<String>();
-        ArrayList<String> categoryL = new ArrayList<String>();
+        ArrayList<String> categoryL = new ArrayList<String>(Arrays.asList(cats));
 
-        try {
-            String line;
-            BufferedReader br = new BufferedReader(new InputStreamReader(
-                    new FileInputStream("/Users/divakarbala/Dropbox/CS projects/CS 130/dropwizard-crud-archetype/categories.txt")));
-            while ((line = br.readLine()) != null)
-                categoryL.add(line);
-            br.close();
-        } catch (Exception e) {}
+        // try {
+        //     String line;
+        //     BufferedReader br = new BufferedReader(new InputStreamReader(
+        //             new FileInputStream("/Users/divakarbala/Dropbox/CS projects/CS 130/dropwizard-crud-archetype/categories.txt")));
+        //     while ((line = br.readLine()) != null)
+        //         categoryL.add(line);
+        //     br.close();
+        // } catch (Exception e) {}
 
         for (int z = 0; z < categoryL.size(); z++) {
             String temp=categoryL.get(z);
