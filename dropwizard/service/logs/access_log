@@ -1,0 +1,1 @@
+0:0:0:0:0:0:0:1 - - [28/Feb/2014:08:07:17 +0000] "GET /services/shoppingcart/v1/shoppingcart/shopperId/12345?format=json HTTP/1.1" 200 44 2514 2514
